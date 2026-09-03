@@ -7,6 +7,19 @@ on:
   workflow_dispatch:
 permissions: {}
 jobs:
+  repository:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: pip install PyYAML
+      - run: python tools/validate_repo.py
+      - run: node tools/test_frontend.js
   hacs:
     runs-on: ubuntu-latest
     steps:

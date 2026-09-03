@@ -4,11 +4,19 @@
     "step": {
       "user": {
         "title": "FloriaX verbinden",
-        "description": "Verbinde Home Assistant mit der FloriaX API. Die API-Basis-URL muss /api/v1 enthalten.",
+        "description": "Verbinde Home Assistant mit FloriaX. Bei einer Server-URL ohne /api/v1 wird der API-Pfad automatisch ergänzt.",
         "data": {
-          "api_base_url": "API-Basis-URL",
+          "api_base_url": "FloriaX Server oder API-Basis-URL",
           "org_id": "Organisations-ID",
-          "api_token": "API-Token"
+          "api_token": "API-Token",
+          "scan_interval": "Aktualisierungsintervall in Sekunden"
+        }
+      },
+      "reauth_confirm": {
+        "title": "FloriaX erneut authentifizieren",
+        "description": "Der API-Token für {name} wurde abgelehnt. Gib einen neuen Organisationstoken ein.",
+        "data": {
+          "api_token": "Neuer API-Token"
         }
       }
     },
@@ -18,12 +26,25 @@
       "invalid_url": "Ungültige URL"
     },
     "abort": {
-      "already_configured": "Diese FloriaX Organisation ist bereits eingerichtet"
+      "already_configured": "Diese FloriaX Organisation ist bereits eingerichtet",
+      "reauth_successful": "Der FloriaX API-Token wurde aktualisiert"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "FloriaX Einstellungen",
+        "description": "Lege fest, wie häufig alle Dashboard-Daten automatisch aktualisiert werden.",
+        "data": {
+          "scan_interval": "Aktualisierungsintervall in Sekunden"
+        }
+      }
     }
   },
   "system_health": {
     "info": {
       "configured_instances": "Konfigurierte Instanzen",
+      "loaded_instances": "Geladene Instanzen",
       "can_reach_server": "FloriaX API erreichbar"
     }
   }

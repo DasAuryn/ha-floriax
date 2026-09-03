@@ -4,11 +4,19 @@
     "step": {
       "user": {
         "title": "Connect FloriaX",
-        "description": "Connect Home Assistant to the FloriaX API. The API base URL must include /api/v1.",
+        "description": "Connect Home Assistant to FloriaX. /api/v1 is appended automatically when you enter only the server URL.",
         "data": {
-          "api_base_url": "API base URL",
+          "api_base_url": "FloriaX server or API base URL",
           "org_id": "Organization ID",
-          "api_token": "API token"
+          "api_token": "API token",
+          "scan_interval": "Refresh interval in seconds"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Reauthenticate FloriaX",
+        "description": "The API token for {name} was rejected. Enter a replacement organization token.",
+        "data": {
+          "api_token": "New API token"
         }
       }
     },
@@ -18,12 +26,25 @@
       "invalid_url": "Invalid URL"
     },
     "abort": {
-      "already_configured": "This FloriaX organization is already configured"
+      "already_configured": "This FloriaX organization is already configured",
+      "reauth_successful": "The FloriaX API token was updated"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "FloriaX settings",
+        "description": "Choose how often all dashboard data is refreshed automatically.",
+        "data": {
+          "scan_interval": "Refresh interval in seconds"
+        }
+      }
     }
   },
   "system_health": {
     "info": {
       "configured_instances": "Configured instances",
+      "loaded_instances": "Loaded instances",
       "can_reach_server": "Reach FloriaX API"
     }
   }

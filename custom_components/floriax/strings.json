@@ -3,28 +3,49 @@
   "config": {
     "step": {
       "user": {
-        "title": "FloriaX verbinden",
-        "description": "Verbinde Home Assistant mit der FloriaX API. Die API-Basis-URL muss /api/v1 enthalten.",
+        "title": "Connect FloriaX",
+        "description": "Connect Home Assistant to FloriaX. /api/v1 is appended automatically when you enter only the server URL.",
         "data": {
-          "api_base_url": "API-Basis-URL",
-          "org_id": "Organisations-ID",
-          "api_token": "API-Token"
+          "api_base_url": "FloriaX server or API base URL",
+          "org_id": "Organization ID",
+          "api_token": "API token",
+          "scan_interval": "Refresh interval in seconds"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Reauthenticate FloriaX",
+        "description": "The API token for {name} was rejected. Enter a replacement organization token.",
+        "data": {
+          "api_token": "New API token"
         }
       }
     },
     "error": {
-      "cannot_connect": "Verbindung zu FloriaX fehlgeschlagen",
-      "invalid_auth": "API-Token wurde abgelehnt",
-      "invalid_url": "Ungültige URL"
+      "cannot_connect": "Could not connect to FloriaX",
+      "invalid_auth": "The API token was rejected",
+      "invalid_url": "Invalid URL"
     },
     "abort": {
-      "already_configured": "Diese FloriaX Organisation ist bereits eingerichtet"
+      "already_configured": "This FloriaX organization is already configured",
+      "reauth_successful": "The FloriaX API token was updated"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "FloriaX settings",
+        "description": "Choose how often all dashboard data is refreshed automatically.",
+        "data": {
+          "scan_interval": "Refresh interval in seconds"
+        }
+      }
     }
   },
   "system_health": {
     "info": {
-      "configured_instances": "Konfigurierte Instanzen",
-      "can_reach_server": "FloriaX API erreichbar"
+      "configured_instances": "Configured instances",
+      "loaded_instances": "Loaded instances",
+      "can_reach_server": "Reach FloriaX API"
     }
   }
 }
