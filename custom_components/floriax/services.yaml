@@ -1,0 +1,1779 @@
+request:
+  name: Raw API request
+  description: Call any FloriaX API path. This is the escape hatch for endpoints not yet present in the bundled OpenAPI catalog.
+  fields:
+    config_entry_id:
+      name: FloriaX instance
+      description: Optional config entry ID. Required only when multiple FloriaX instances are configured.
+      selector:
+        config_entry:
+          integration: floriax
+    method:
+      name: HTTP method
+      required: true
+      selector:
+        select:
+          options:
+          - GET
+          - POST
+          - PUT
+          - PATCH
+          - DELETE
+    path:
+      name: API path
+      required: true
+      example: /organizations/{orgId}/gateways
+      selector:
+        text: {}
+    path_parameters:
+      name: Path parameters
+      selector:
+        object: {}
+    query:
+      name: Query parameters
+      selector:
+        object: {}
+    body:
+      name: Request body
+      selector:
+        object: {}
+get_gateways:
+  name: Gateways auflisten
+  description: GET /organizations/{orgId}/gateways
+  fields:
+    config_entry_id:
+      name: FloriaX instance
+      description: Optional config entry ID. Required only when multiple FloriaX instances are configured.
+      selector:
+        config_entry:
+          integration: floriax
+    query:
+      name: Query parameters
+      description: Optional object with URL query parameters.
+      selector:
+        object: {}
+    body:
+      name: Request body
+      description: Optional JSON-compatible request body.
+      selector:
+        object: {}
+post_gateways:
+  name: Gateway erstellen
+  description: POST /organizations/{orgId}/gateways
+  fields:
+    config_entry_id:
+      name: FloriaX instance
+      description: Optional config entry ID. Required only when multiple FloriaX instances are configured.
+      selector:
+        config_entry:
+          integration: floriax
+    query:
+      name: Query parameters
+      description: Optional object with URL query parameters.
+      selector:
+        object: {}
+    body:
+      name: Request body
+      description: Optional JSON-compatible request body.
+      selector:
+        object: {}
+put_gateways_by_gateway_id:
+  name: Gateway aktualisieren
+  description: PUT /organizations/{orgId}/gateways/{gatewayId}
+  fields:
+    config_entry_id:
+      name: FloriaX instance
+      description: Optional config entry ID. Required only when multiple FloriaX instances are configured.
+      selector:
+        config_entry:
+          integration: floriax
+    gateway_id:
+      name: gatewayId
+      description: Path parameter gatewayId.
+      required: true
+      selector:
+        text: {}
+    query:
+      name: Query parameters
+      description: Optional object with URL query parameters.
+      selector:
+        object: {}
+    body:
+      name: Request body
+      description: Optional JSON-compatible request body.
+      selector:
+        object: {}
+delete_gateways_by_gateway_id:
+  name: Gateway löschen
+  description: DELETE /organizations/{orgId}/gateways/{gatewayId}
+  fields:
+    config_entry_id:
+      name: FloriaX instance
+      description: Optional config entry ID. Required only when multiple FloriaX instances are configured.
+      selector:
+        config_entry:
+          integration: floriax
+    gateway_id:
+      name: gatewayId
+      description: Path parameter gatewayId.
+      required: true
+      selector:
+        text: {}
+    query:
+      name: Query parameters
+      description: Optional object with URL query parameters.
+      selector:
+        object: {}
+    body:
+      name: Request body
+      description: Optional JSON-compatible request body.
+      selector:
+        object: {}
+post_gateways_import:
+  name: Gateways importieren
+  description: POST /organizations/{orgId}/gateways/import
+  fields:
+    config_entry_id:
+      name: FloriaX instance
+      description: Optional config entry ID. Required only when multiple FloriaX instances are configured.
+      selector:
+        config_entry:
+          integration: floriax
+    query:
+      name: Query parameters
+      description: Optional object with URL query parameters.
+      selector:
+        object: {}
+    body:
+      name: Request body
+      description: Optional JSON-compatible request body.
+      selector:
+        object: {}
+get_gateways_by_gateway_id_settings:
+  name: Gateway-Einstellungen abrufen
+  description: GET /organizations/{orgId}/gateways/{gatewayId}/settings
+  fields:
+    config_entry_id:
+      name: FloriaX instance
+      description: Optional config entry ID. Required only when multiple FloriaX instances are configured.
+      selector:
+        config_entry:
+          integration: floriax
+    gateway_id:
+      name: gatewayId
+      description: Path parameter gatewayId.
+      required: true
+      selector:
+        text: {}
+    query:
+      name: Query parameters
+      description: Optional object with URL query parameters.
+      selector:
+        object: {}
+    body:
+      name: Request body
+      description: Optional JSON-compatible request body.
+      selector:
+        object: {}
+put_gateways_by_gateway_id_settings:
+  name: Gateway-Einstellungen speichern
+  description: PUT /organizations/{orgId}/gateways/{gatewayId}/settings
+  fields:
+    config_entry_id:
+      name: FloriaX instance
+      description: Optional config entry ID. Required only when multiple FloriaX instances are configured.
+      selector:
+        config_entry:
+          integration: floriax
+    gateway_id:
+      name: gatewayId
+      description: Path parameter gatewayId.
+      required: true
+      selector:
+        text: {}
+    query:
+      name: Query parameters
+      description: Optional object with URL query parameters.
+      selector:
+        object: {}
+    body:
+      name: Request body
+      description: Optional JSON-compatible request body.
+      selector:
+        object: {}
+get_gateway_groups:
+  name: Gateway-Gruppen auflisten
+  description: GET /organizations/{orgId}/gateway-groups
+  fields:
+    config_entry_id:
+      name: FloriaX instance
+      description: Optional config entry ID. Required only when multiple FloriaX instances are configured.
+      selector:
+        config_entry:
+          integration: floriax
+    query:
+      name: Query parameters
+      description: Optional object with URL query parameters.
+      selector:
+        object: {}
+    body:
+      name: Request body
+      description: Optional JSON-compatible request body.
+      selector:
+        object: {}
+post_gateway_groups:
+  name: Gateway-Gruppe erstellen
+  description: POST /organizations/{orgId}/gateway-groups
+  fields:
+    config_entry_id:
+      name: FloriaX instance
+      description: Optional config entry ID. Required only when multiple FloriaX instances are configured.
+      selector:
+        config_entry:
+          integration: floriax
+    query:
+      name: Query parameters
+      description: Optional object with URL query parameters.
+      selector:
+        object: {}
+    body:
+      name: Request body
+      description: Optional JSON-compatible request body.
+      selector:
+        object: {}
+get_buttons:
+  name: Buttons auflisten
+  description: GET /organizations/{orgId}/buttons
+  fields:
+    config_entry_id:
+      name: FloriaX instance
+      description: Optional config entry ID. Required only when multiple FloriaX instances are configured.
+      selector:
+        config_entry:
+          integration: floriax
+    query:
+      name: Query parameters
+      description: Optional object with URL query parameters.
+      selector:
+        object: {}
+    body:
+      name: Request body
+      description: Optional JSON-compatible request body.
+      selector:
+        object: {}
+post_buttons:
+  name: Button erstellen
+  description: POST /organizations/{orgId}/buttons
+  fields:
+    config_entry_id:
+      name: FloriaX instance
+      description: Optional config entry ID. Required only when multiple FloriaX instances are configured.
+      selector:
+        config_entry:
+          integration: floriax
+    query:
+      name: Query parameters
+      description: Optional object with URL query parameters.
+      selector:
+        object: {}
+    body:
+      name: Request body
+      description: Optional JSON-compatible request body.
+      selector:
+        object: {}
+put_buttons_by_button_id:
+  name: Button aktualisieren
+  description: PUT /organizations/{orgId}/buttons/{buttonId}
+  fields:
+    config_entry_id:
+      name: FloriaX instance
+      description: Optional config entry ID. Required only when multiple FloriaX instances are configured.
+      selector:
+        config_entry:
+          integration: floriax
+    button_id:
+      name: buttonId
+      description: Path parameter buttonId.
+      required: true
+      selector:
+        text: {}
+    query:
+      name: Query parameters
+      description: Optional object with URL query parameters.
+      selector:
+        object: {}
+    body:
+      name: Request body
+      description: Optional JSON-compatible request body.
+      selector:
+        object: {}
+delete_buttons_by_button_id:
+  name: Button löschen
+  description: DELETE /organizations/{orgId}/buttons/{buttonId}
+  fields:
+    config_entry_id:
+      name: FloriaX instance
+      description: Optional config entry ID. Required only when multiple FloriaX instances are configured.
+      selector:
+        config_entry:
+          integration: floriax
+    button_id:
+      name: buttonId
+      description: Path parameter buttonId.
+      required: true
+      selector:
+        text: {}
+    query:
+      name: Query parameters
+      description: Optional object with URL query parameters.
+      selector:
+        object: {}
+    body:
+      name: Request body
+      description: Optional JSON-compatible request body.
+      selector:
+        object: {}
+post_buttons_import:
+  name: Buttons importieren
+  description: POST /organizations/{orgId}/buttons/import
+  fields:
+    config_entry_id:
+      name: FloriaX instance
+      description: Optional config entry ID. Required only when multiple FloriaX instances are configured.
+      selector:
+        config_entry:
+          integration: floriax
+    query:
+      name: Query parameters
+      description: Optional object with URL query parameters.
+      selector:
+        object: {}
+    body:
+      name: Request body
+      description: Optional JSON-compatible request body.
+      selector:
+        object: {}
+get_environment_sensors:
+  name: Umweltsensoren auflisten
+  description: GET /organizations/{orgId}/environment-sensors
+  fields:
+    config_entry_id:
+      name: FloriaX instance
+      description: Optional config entry ID. Required only when multiple FloriaX instances are configured.
+      selector:
+        config_entry:
+          integration: floriax
+    query:
+      name: Query parameters
+      description: Optional object with URL query parameters.
+      selector:
+        object: {}
+    body:
+      name: Request body
+      description: Optional JSON-compatible request body.
+      selector:
+        object: {}
+get_environment_sensors_by_sensor_id_readings:
+  name: Sensor-Messwerte abrufen
+  description: GET /organizations/{orgId}/environment-sensors/{sensorId}/readings
+  fields:
+    config_entry_id:
+      name: FloriaX instance
+      description: Optional config entry ID. Required only when multiple FloriaX instances are configured.
+      selector:
+        config_entry:
+          integration: floriax
+    sensor_id:
+      name: sensorId
+      description: Path parameter sensorId.
+      required: true
+      selector:
+        text: {}
+    query:
+      name: Query parameters
+      description: Optional object with URL query parameters.
+      selector:
+        object: {}
+    body:
+      name: Request body
+      description: Optional JSON-compatible request body.
+      selector:
+        object: {}
+put_environment_sensors_by_sensor_id:
+  name: Sensor aktualisieren
+  description: PUT /organizations/{orgId}/environment-sensors/{sensorId}
+  fields:
+    config_entry_id:
+      name: FloriaX instance
+      description: Optional config entry ID. Required only when multiple FloriaX instances are configured.
+      selector:
+        config_entry:
+          integration: floriax
+    sensor_id:
+      name: sensorId
+      description: Path parameter sensorId.
+      required: true
+      selector:
+        text: {}
+    query:
+      name: Query parameters
+      description: Optional object with URL query parameters.
+      selector:
+        object: {}
+    body:
+      name: Request body
+      description: Optional JSON-compatible request body.
+      selector:
+        object: {}
+get_things_entities:
+  name: Thing-Entitäten auflisten
+  description: GET /organizations/{orgId}/things/entities
+  fields:
+    config_entry_id:
+      name: FloriaX instance
+      description: Optional config entry ID. Required only when multiple FloriaX instances are configured.
+      selector:
+        config_entry:
+          integration: floriax
+    query:
+      name: Query parameters
+      description: Optional object with URL query parameters.
+      selector:
+        object: {}
+    body:
+      name: Request body
+      description: Optional JSON-compatible request body.
+      selector:
+        object: {}
+post_things_entities:
+  name: Thing-Entität erstellen
+  description: POST /organizations/{orgId}/things/entities
+  fields:
+    config_entry_id:
+      name: FloriaX instance
+      description: Optional config entry ID. Required only when multiple FloriaX instances are configured.
+      selector:
+        config_entry:
+          integration: floriax
+    query:
+      name: Query parameters
+      description: Optional object with URL query parameters.
+      selector:
+        object: {}
+    body:
+      name: Request body
+      description: Optional JSON-compatible request body.
+      selector:
+        object: {}
+get_alarms_settings:
+  name: Alarm-Einstellungen abrufen
+  description: GET /organizations/{orgId}/alarms/settings
+  fields:
+    config_entry_id:
+      name: FloriaX instance
+      description: Optional config entry ID. Required only when multiple FloriaX instances are configured.
+      selector:
+        config_entry:
+          integration: floriax
+    query:
+      name: Query parameters
+      description: Optional object with URL query parameters.
+      selector:
+        object: {}
+    body:
+      name: Request body
+      description: Optional JSON-compatible request body.
+      selector:
+        object: {}
+put_alarms_settings:
+  name: Alarm-Einstellungen speichern
+  description: PUT /organizations/{orgId}/alarms/settings
+  fields:
+    config_entry_id:
+      name: FloriaX instance
+      description: Optional config entry ID. Required only when multiple FloriaX instances are configured.
+      selector:
+        config_entry:
+          integration: floriax
+    query:
+      name: Query parameters
+      description: Optional object with URL query parameters.
+      selector:
+        object: {}
+    body:
+      name: Request body
+      description: Optional JSON-compatible request body.
+      selector:
+        object: {}
+get_alarms_targets:
+  name: Alarm-Ziele abrufen
+  description: GET /organizations/{orgId}/alarms/targets
+  fields:
+    config_entry_id:
+      name: FloriaX instance
+      description: Optional config entry ID. Required only when multiple FloriaX instances are configured.
+      selector:
+        config_entry:
+          integration: floriax
+    query:
+      name: Query parameters
+      description: Optional object with URL query parameters.
+      selector:
+        object: {}
+    body:
+      name: Request body
+      description: Optional JSON-compatible request body.
+      selector:
+        object: {}
+put_alarms_targets:
+  name: Alarm-Ziele speichern
+  description: PUT /organizations/{orgId}/alarms/targets
+  fields:
+    config_entry_id:
+      name: FloriaX instance
+      description: Optional config entry ID. Required only when multiple FloriaX instances are configured.
+      selector:
+        config_entry:
+          integration: floriax
+    query:
+      name: Query parameters
+      description: Optional object with URL query parameters.
+      selector:
+        object: {}
+    body:
+      name: Request body
+      description: Optional JSON-compatible request body.
+      selector:
+        object: {}
+get_alarms_events:
+  name: Alarm-Ereignisse abrufen
+  description: GET /organizations/{orgId}/alarms/events
+  fields:
+    config_entry_id:
+      name: FloriaX instance
+      description: Optional config entry ID. Required only when multiple FloriaX instances are configured.
+      selector:
+        config_entry:
+          integration: floriax
+    query:
+      name: Query parameters
+      description: Optional object with URL query parameters.
+      selector:
+        object: {}
+    body:
+      name: Request body
+      description: Optional JSON-compatible request body.
+      selector:
+        object: {}
+patch_alarms_events_by_event_id:
+  name: Alarm-Ereignis archivieren
+  description: PATCH /organizations/{orgId}/alarms/events/{eventId}
+  fields:
+    config_entry_id:
+      name: FloriaX instance
+      description: Optional config entry ID. Required only when multiple FloriaX instances are configured.
+      selector:
+        config_entry:
+          integration: floriax
+    event_id:
+      name: eventId
+      description: Path parameter eventId.
+      required: true
+      selector:
+        text: {}
+    query:
+      name: Query parameters
+      description: Optional object with URL query parameters.
+      selector:
+        object: {}
+    body:
+      name: Request body
+      description: Optional JSON-compatible request body.
+      selector:
+        object: {}
+get_mqtt_connections:
+  name: MQTT-Verbindungen auflisten
+  description: GET /organizations/{orgId}/mqtt-connections
+  fields:
+    config_entry_id:
+      name: FloriaX instance
+      description: Optional config entry ID. Required only when multiple FloriaX instances are configured.
+      selector:
+        config_entry:
+          integration: floriax
+    query:
+      name: Query parameters
+      description: Optional object with URL query parameters.
+      selector:
+        object: {}
+    body:
+      name: Request body
+      description: Optional JSON-compatible request body.
+      selector:
+        object: {}
+post_mqtt_connections:
+  name: MQTT-Verbindung erstellen
+  description: POST /organizations/{orgId}/mqtt-connections
+  fields:
+    config_entry_id:
+      name: FloriaX instance
+      description: Optional config entry ID. Required only when multiple FloriaX instances are configured.
+      selector:
+        config_entry:
+          integration: floriax
+    query:
+      name: Query parameters
+      description: Optional object with URL query parameters.
+      selector:
+        object: {}
+    body:
+      name: Request body
+      description: Optional JSON-compatible request body.
+      selector:
+        object: {}
+get_mqtt_connections_by_connection_id_messages:
+  name: MQTT-Nachrichten abrufen
+  description: GET /organizations/{orgId}/mqtt-connections/{connectionId}/messages
+  fields:
+    config_entry_id:
+      name: FloriaX instance
+      description: Optional config entry ID. Required only when multiple FloriaX instances are configured.
+      selector:
+        config_entry:
+          integration: floriax
+    connection_id:
+      name: connectionId
+      description: Path parameter connectionId.
+      required: true
+      selector:
+        text: {}
+    query:
+      name: Query parameters
+      description: Optional object with URL query parameters.
+      selector:
+        object: {}
+    body:
+      name: Request body
+      description: Optional JSON-compatible request body.
+      selector:
+        object: {}
+get_hosted_mqtt_broker:
+  name: Hosted MQTT Broker abrufen
+  description: GET /organizations/{orgId}/hosted-mqtt-broker
+  fields:
+    config_entry_id:
+      name: FloriaX instance
+      description: Optional config entry ID. Required only when multiple FloriaX instances are configured.
+      selector:
+        config_entry:
+          integration: floriax
+    query:
+      name: Query parameters
+      description: Optional object with URL query parameters.
+      selector:
+        object: {}
+    body:
+      name: Request body
+      description: Optional JSON-compatible request body.
+      selector:
+        object: {}
+post_hosted_mqtt_broker:
+  name: Hosted MQTT Broker bereitstellen
+  description: POST /organizations/{orgId}/hosted-mqtt-broker
+  fields:
+    config_entry_id:
+      name: FloriaX instance
+      description: Optional config entry ID. Required only when multiple FloriaX instances are configured.
+      selector:
+        config_entry:
+          integration: floriax
+    query:
+      name: Query parameters
+      description: Optional object with URL query parameters.
+      selector:
+        object: {}
+    body:
+      name: Request body
+      description: Optional JSON-compatible request body.
+      selector:
+        object: {}
+get_hosted_mqtt_broker_users:
+  name: Hosted MQTT Benutzer auflisten
+  description: GET /organizations/{orgId}/hosted-mqtt-broker/users
+  fields:
+    config_entry_id:
+      name: FloriaX instance
+      description: Optional config entry ID. Required only when multiple FloriaX instances are configured.
+      selector:
+        config_entry:
+          integration: floriax
+    query:
+      name: Query parameters
+      description: Optional object with URL query parameters.
+      selector:
+        object: {}
+    body:
+      name: Request body
+      description: Optional JSON-compatible request body.
+      selector:
+        object: {}
+post_hosted_mqtt_broker_users:
+  name: Hosted MQTT Benutzer erstellen
+  description: POST /organizations/{orgId}/hosted-mqtt-broker/users
+  fields:
+    config_entry_id:
+      name: FloriaX instance
+      description: Optional config entry ID. Required only when multiple FloriaX instances are configured.
+      selector:
+        config_entry:
+          integration: floriax
+    query:
+      name: Query parameters
+      description: Optional object with URL query parameters.
+      selector:
+        object: {}
+    body:
+      name: Request body
+      description: Optional JSON-compatible request body.
+      selector:
+        object: {}
+delete_hosted_mqtt_broker_users_by_hosted_user_id:
+  name: Hosted MQTT Benutzer löschen
+  description: DELETE /organizations/{orgId}/hosted-mqtt-broker/users/{hostedUserId}
+  fields:
+    config_entry_id:
+      name: FloriaX instance
+      description: Optional config entry ID. Required only when multiple FloriaX instances are configured.
+      selector:
+        config_entry:
+          integration: floriax
+    hosted_user_id:
+      name: hostedUserId
+      description: Path parameter hostedUserId.
+      required: true
+      selector:
+        text: {}
+    query:
+      name: Query parameters
+      description: Optional object with URL query parameters.
+      selector:
+        object: {}
+    body:
+      name: Request body
+      description: Optional JSON-compatible request body.
+      selector:
+        object: {}
+get_time_tracking_sessions:
+  name: Zeiterfassungs-Sessions abrufen
+  description: GET /organizations/{orgId}/time-tracking/sessions
+  fields:
+    config_entry_id:
+      name: FloriaX instance
+      description: Optional config entry ID. Required only when multiple FloriaX instances are configured.
+      selector:
+        config_entry:
+          integration: floriax
+    query:
+      name: Query parameters
+      description: Optional object with URL query parameters.
+      selector:
+        object: {}
+    body:
+      name: Request body
+      description: Optional JSON-compatible request body.
+      selector:
+        object: {}
+post_time_tracking_sessions:
+  name: Zeiterfassungs-Sessions importieren
+  description: POST /organizations/{orgId}/time-tracking/sessions
+  fields:
+    config_entry_id:
+      name: FloriaX instance
+      description: Optional config entry ID. Required only when multiple FloriaX instances are configured.
+      selector:
+        config_entry:
+          integration: floriax
+    query:
+      name: Query parameters
+      description: Optional object with URL query parameters.
+      selector:
+        object: {}
+    body:
+      name: Request body
+      description: Optional JSON-compatible request body.
+      selector:
+        object: {}
+get_time_tracking_incidents:
+  name: Zeiterfassungs-Einsätze auflisten
+  description: GET /organizations/{orgId}/time-tracking/incidents
+  fields:
+    config_entry_id:
+      name: FloriaX instance
+      description: Optional config entry ID. Required only when multiple FloriaX instances are configured.
+      selector:
+        config_entry:
+          integration: floriax
+    query:
+      name: Query parameters
+      description: Optional object with URL query parameters.
+      selector:
+        object: {}
+    body:
+      name: Request body
+      description: Optional JSON-compatible request body.
+      selector:
+        object: {}
+post_time_tracking_incidents:
+  name: Zeiterfassungs-Einsatz erstellen
+  description: POST /organizations/{orgId}/time-tracking/incidents
+  fields:
+    config_entry_id:
+      name: FloriaX instance
+      description: Optional config entry ID. Required only when multiple FloriaX instances are configured.
+      selector:
+        config_entry:
+          integration: floriax
+    query:
+      name: Query parameters
+      description: Optional object with URL query parameters.
+      selector:
+        object: {}
+    body:
+      name: Request body
+      description: Optional JSON-compatible request body.
+      selector:
+        object: {}
+get_time_tracking_incidents_by_incident_id:
+  name: Zeiterfassungs-Einsatzdetails abrufen
+  description: GET /organizations/{orgId}/time-tracking/incidents/{incidentId}
+  fields:
+    config_entry_id:
+      name: FloriaX instance
+      description: Optional config entry ID. Required only when multiple FloriaX instances are configured.
+      selector:
+        config_entry:
+          integration: floriax
+    incident_id:
+      name: incidentId
+      description: Path parameter incidentId.
+      required: true
+      selector:
+        text: {}
+    query:
+      name: Query parameters
+      description: Optional object with URL query parameters.
+      selector:
+        object: {}
+    body:
+      name: Request body
+      description: Optional JSON-compatible request body.
+      selector:
+        object: {}
+get_grouplead_people:
+  name: Personen auflisten; avatarUrl ist nur die Floriax-Bildroute, avatarSourceUrl die Verwaltungsquelle, avatarError ein
+    optionaler Fehlercode
+  description: GET /organizations/{orgId}/grouplead/people
+  fields:
+    config_entry_id:
+      name: FloriaX instance
+      description: Optional config entry ID. Required only when multiple FloriaX instances are configured.
+      selector:
+        config_entry:
+          integration: floriax
+    query:
+      name: Query parameters
+      description: Optional object with URL query parameters.
+      selector:
+        object: {}
+    body:
+      name: Request body
+      description: Optional JSON-compatible request body.
+      selector:
+        object: {}
+post_grouplead_people:
+  name: Lokale GroupLead-Person erstellen und avatarUrl serverseitig laden; Bildfehler verhindern die Person nicht
+  description: POST /organizations/{orgId}/grouplead/people
+  fields:
+    config_entry_id:
+      name: FloriaX instance
+      description: Optional config entry ID. Required only when multiple FloriaX instances are configured.
+      selector:
+        config_entry:
+          integration: floriax
+    query:
+      name: Query parameters
+      description: Optional object with URL query parameters.
+      selector:
+        object: {}
+    body:
+      name: Request body
+      description: Optional JSON-compatible request body.
+      selector:
+        object: {}
+get_grouplead_person_avatars_by_org_id_by_person_record_id:
+  name: Versioniertes Floriax-Personenbild öffentlich laden; v muss exakt der aktuellen 64-stelligen SHA-256-Version entsprechen
+  description: GET /grouplead-person-avatars/{orgId}/{personRecordId}
+  fields:
+    config_entry_id:
+      name: FloriaX instance
+      description: Optional config entry ID. Required only when multiple FloriaX instances are configured.
+      selector:
+        config_entry:
+          integration: floriax
+    person_record_id:
+      name: personRecordId
+      description: Path parameter personRecordId.
+      required: true
+      selector:
+        text: {}
+    query:
+      name: Query parameters
+      description: Optional object with URL query parameters.
+      selector:
+        object: {}
+    body:
+      name: Request body
+      description: Optional JSON-compatible request body.
+      selector:
+        object: {}
+put_grouplead_people_by_person_record_id:
+  name: GroupLead-Person aktualisieren; unveränderte Avatarquelle erhält gespeicherte Bytes
+  description: PUT /organizations/{orgId}/grouplead/people/{personRecordId}
+  fields:
+    config_entry_id:
+      name: FloriaX instance
+      description: Optional config entry ID. Required only when multiple FloriaX instances are configured.
+      selector:
+        config_entry:
+          integration: floriax
+    person_record_id:
+      name: personRecordId
+      description: Path parameter personRecordId.
+      required: true
+      selector:
+        text: {}
+    query:
+      name: Query parameters
+      description: Optional object with URL query parameters.
+      selector:
+        object: {}
+    body:
+      name: Request body
+      description: Optional JSON-compatible request body.
+      selector:
+        object: {}
+delete_grouplead_people_by_person_record_id:
+  name: GroupLead-Person löschen; ein späterer Import meldet den gelöschten Datensatz als Konflikt
+  description: DELETE /organizations/{orgId}/grouplead/people/{personRecordId}
+  fields:
+    config_entry_id:
+      name: FloriaX instance
+      description: Optional config entry ID. Required only when multiple FloriaX instances are configured.
+      selector:
+        config_entry:
+          integration: floriax
+    person_record_id:
+      name: personRecordId
+      description: Path parameter personRecordId.
+      required: true
+      selector:
+        text: {}
+    query:
+      name: Query parameters
+      description: Optional object with URL query parameters.
+      selector:
+        object: {}
+    body:
+      name: Request body
+      description: Optional JSON-compatible request body.
+      selector:
+        object: {}
+get_grouplead_tags:
+  name: GroupLead-eigene Tags mit normalisierter MAC und optionaler Personen-ID auflisten
+  description: GET /organizations/{orgId}/grouplead/tags
+  fields:
+    config_entry_id:
+      name: FloriaX instance
+      description: Optional config entry ID. Required only when multiple FloriaX instances are configured.
+      selector:
+        config_entry:
+          integration: floriax
+    query:
+      name: Query parameters
+      description: Optional object with URL query parameters.
+      selector:
+        object: {}
+    body:
+      name: Request body
+      description: Optional JSON-compatible request body.
+      selector:
+        object: {}
+post_grouplead_tags:
+  name: Unbekannte MAC eigenständig registrieren; alternativ sourceButtonId senden (benötigt zusätzlich buttons:read), um
+    einen unabhängigen Snapshot aus dem Floriax-Buttonbestand anzulegen
+  description: POST /organizations/{orgId}/grouplead/tags
+  fields:
+    config_entry_id:
+      name: FloriaX instance
+      description: Optional config entry ID. Required only when multiple FloriaX instances are configured.
+      selector:
+        config_entry:
+          integration: floriax
+    query:
+      name: Query parameters
+      description: Optional object with URL query parameters.
+      selector:
+        object: {}
+    body:
+      name: Request body
+      description: Optional JSON-compatible request body.
+      selector:
+        object: {}
+patch_grouplead_tags_by_tag_id:
+  name: GroupLead-eigenen Namen oder UUID-Snapshot aktualisieren, ohne die Floriax-Quelle zu verändern; expectedName schützt
+    die Web-Bearbeitung optional vor parallelem Überschreiben
+  description: PATCH /organizations/{orgId}/grouplead/tags/{tagId}
+  fields:
+    config_entry_id:
+      name: FloriaX instance
+      description: Optional config entry ID. Required only when multiple FloriaX instances are configured.
+      selector:
+        config_entry:
+          integration: floriax
+    tag_id:
+      name: tagId
+      description: Path parameter tagId.
+      required: true
+      selector:
+        text: {}
+    query:
+      name: Query parameters
+      description: Optional object with URL query parameters.
+      selector:
+        object: {}
+    body:
+      name: Request body
+      description: Optional JSON-compatible request body.
+      selector:
+        object: {}
+delete_grouplead_tags_by_tag_id:
+  name: Nur den GroupLead-eigenen Tag löschen
+  description: DELETE /organizations/{orgId}/grouplead/tags/{tagId}
+  fields:
+    config_entry_id:
+      name: FloriaX instance
+      description: Optional config entry ID. Required only when multiple FloriaX instances are configured.
+      selector:
+        config_entry:
+          integration: floriax
+    tag_id:
+      name: tagId
+      description: Path parameter tagId.
+      required: true
+      selector:
+        text: {}
+    query:
+      name: Query parameters
+      description: Optional object with URL query parameters.
+      selector:
+        object: {}
+    body:
+      name: Request body
+      description: Optional JSON-compatible request body.
+      selector:
+        object: {}
+post_grouplead_tags_by_tag_id_telemetry:
+  name: Akkustand melden; lastSeenAt setzt der Server. Nur Akkuänderungen invalidieren Realtime und APNs.
+  description: POST /organizations/{orgId}/grouplead/tags/{tagId}/telemetry
+  fields:
+    config_entry_id:
+      name: FloriaX instance
+      description: Optional config entry ID. Required only when multiple FloriaX instances are configured.
+      selector:
+        config_entry:
+          integration: floriax
+    tag_id:
+      name: tagId
+      description: Path parameter tagId.
+      required: true
+      selector:
+        text: {}
+    query:
+      name: Query parameters
+      description: Optional object with URL query parameters.
+      selector:
+        object: {}
+    body:
+      name: Request body
+      description: Optional JSON-compatible request body.
+      selector:
+        object: {}
+put_grouplead_tags_by_tag_id_assignment:
+  name: 'Tag über die gemeinsame signierte Personen-ID zuordnen: positive ID für Floriax-Organisationsmitglieder, negative
+    ID für GroupLead-Personen'
+  description: PUT /organizations/{orgId}/grouplead/tags/{tagId}/assignment
+  fields:
+    config_entry_id:
+      name: FloriaX instance
+      description: Optional config entry ID. Required only when multiple FloriaX instances are configured.
+      selector:
+        config_entry:
+          integration: floriax
+    tag_id:
+      name: tagId
+      description: Path parameter tagId.
+      required: true
+      selector:
+        text: {}
+    query:
+      name: Query parameters
+      description: Optional object with URL query parameters.
+      selector:
+        object: {}
+    body:
+      name: Request body
+      description: Optional JSON-compatible request body.
+      selector:
+        object: {}
+delete_grouplead_tags_by_tag_id_assignment:
+  name: Personenzuordnung lösen, ohne Tag oder Floriax-Daten zu löschen
+  description: DELETE /organizations/{orgId}/grouplead/tags/{tagId}/assignment
+  fields:
+    config_entry_id:
+      name: FloriaX instance
+      description: Optional config entry ID. Required only when multiple FloriaX instances are configured.
+      selector:
+        config_entry:
+          integration: floriax
+    tag_id:
+      name: tagId
+      description: Path parameter tagId.
+      required: true
+      selector:
+        text: {}
+    query:
+      name: Query parameters
+      description: Optional object with URL query parameters.
+      selector:
+        object: {}
+    body:
+      name: Request body
+      description: Optional JSON-compatible request body.
+      selector:
+        object: {}
+get_grouplead_vehicles:
+  name: Fahrzeuge auflisten
+  description: GET /organizations/{orgId}/grouplead/vehicles
+  fields:
+    config_entry_id:
+      name: FloriaX instance
+      description: Optional config entry ID. Required only when multiple FloriaX instances are configured.
+      selector:
+        config_entry:
+          integration: floriax
+    query:
+      name: Query parameters
+      description: Optional object with URL query parameters.
+      selector:
+        object: {}
+    body:
+      name: Request body
+      description: Optional JSON-compatible request body.
+      selector:
+        object: {}
+post_grouplead_vehicles:
+  name: Fahrzeug erstellen
+  description: POST /organizations/{orgId}/grouplead/vehicles
+  fields:
+    config_entry_id:
+      name: FloriaX instance
+      description: Optional config entry ID. Required only when multiple FloriaX instances are configured.
+      selector:
+        config_entry:
+          integration: floriax
+    query:
+      name: Query parameters
+      description: Optional object with URL query parameters.
+      selector:
+        object: {}
+    body:
+      name: Request body
+      description: Optional JSON-compatible request body.
+      selector:
+        object: {}
+put_grouplead_vehicles_by_vehicle_id:
+  name: Fahrzeug aktualisieren
+  description: PUT /organizations/{orgId}/grouplead/vehicles/{vehicleId}
+  fields:
+    config_entry_id:
+      name: FloriaX instance
+      description: Optional config entry ID. Required only when multiple FloriaX instances are configured.
+      selector:
+        config_entry:
+          integration: floriax
+    vehicle_id:
+      name: vehicleId
+      description: Path parameter vehicleId.
+      required: true
+      selector:
+        text: {}
+    query:
+      name: Query parameters
+      description: Optional object with URL query parameters.
+      selector:
+        object: {}
+    body:
+      name: Request body
+      description: Optional JSON-compatible request body.
+      selector:
+        object: {}
+delete_grouplead_vehicles_by_vehicle_id:
+  name: Fahrzeug löschen
+  description: DELETE /organizations/{orgId}/grouplead/vehicles/{vehicleId}
+  fields:
+    config_entry_id:
+      name: FloriaX instance
+      description: Optional config entry ID. Required only when multiple FloriaX instances are configured.
+      selector:
+        config_entry:
+          integration: floriax
+    vehicle_id:
+      name: vehicleId
+      description: Path parameter vehicleId.
+      required: true
+      selector:
+        text: {}
+    query:
+      name: Query parameters
+      description: Optional object with URL query parameters.
+      selector:
+        object: {}
+    body:
+      name: Request body
+      description: Optional JSON-compatible request body.
+      selector:
+        object: {}
+get_grouplead_teams:
+  name: Teams einschließlich archivierter Teams auflisten
+  description: GET /organizations/{orgId}/grouplead/teams
+  fields:
+    config_entry_id:
+      name: FloriaX instance
+      description: Optional config entry ID. Required only when multiple FloriaX instances are configured.
+      selector:
+        config_entry:
+          integration: floriax
+    query:
+      name: Query parameters
+      description: Optional object with URL query parameters.
+      selector:
+        object: {}
+    body:
+      name: Request body
+      description: Optional JSON-compatible request body.
+      selector:
+        object: {}
+put_grouplead_teams:
+  name: 'Team-Upsert: ohne revision Create/blindes Update (Create startet bei 1); mit revision nur CAS-Update, fehlend oder
+    stale ergibt 409'
+  description: PUT /organizations/{orgId}/grouplead/teams
+  fields:
+    config_entry_id:
+      name: FloriaX instance
+      description: Optional config entry ID. Required only when multiple FloriaX instances are configured.
+      selector:
+        config_entry:
+          integration: floriax
+    query:
+      name: Query parameters
+      description: Optional object with URL query parameters.
+      selector:
+        object: {}
+    body:
+      name: Request body
+      description: Optional JSON-compatible request body.
+      selector:
+        object: {}
+delete_grouplead_teams_by_team_row_id:
+  name: Team löschen
+  description: DELETE /organizations/{orgId}/grouplead/teams/{teamRowId}
+  fields:
+    config_entry_id:
+      name: FloriaX instance
+      description: Optional config entry ID. Required only when multiple FloriaX instances are configured.
+      selector:
+        config_entry:
+          integration: floriax
+    team_row_id:
+      name: teamRowId
+      description: Path parameter teamRowId.
+      required: true
+      selector:
+        text: {}
+    query:
+      name: Query parameters
+      description: Optional object with URL query parameters.
+      selector:
+        object: {}
+    body:
+      name: Request body
+      description: Optional JSON-compatible request body.
+      selector:
+        object: {}
+get_grouplead_map_objects:
+  name: Kartenobjekte auflisten
+  description: GET /organizations/{orgId}/grouplead/map-objects
+  fields:
+    config_entry_id:
+      name: FloriaX instance
+      description: Optional config entry ID. Required only when multiple FloriaX instances are configured.
+      selector:
+        config_entry:
+          integration: floriax
+    query:
+      name: Query parameters
+      description: Optional object with URL query parameters.
+      selector:
+        object: {}
+    body:
+      name: Request body
+      description: Optional JSON-compatible request body.
+      selector:
+        object: {}
+put_grouplead_map_objects:
+  name: 'Kartenobjekt-Upsert: ohne revision Create/blindes Update (Create startet bei 1); mit revision nur CAS-Update, fehlend
+    oder stale ergibt 409'
+  description: PUT /organizations/{orgId}/grouplead/map-objects
+  fields:
+    config_entry_id:
+      name: FloriaX instance
+      description: Optional config entry ID. Required only when multiple FloriaX instances are configured.
+      selector:
+        config_entry:
+          integration: floriax
+    query:
+      name: Query parameters
+      description: Optional object with URL query parameters.
+      selector:
+        object: {}
+    body:
+      name: Request body
+      description: Optional JSON-compatible request body.
+      selector:
+        object: {}
+delete_grouplead_map_objects_by_map_object_row_id:
+  name: Kartenobjekt löschen
+  description: DELETE /organizations/{orgId}/grouplead/map-objects/{mapObjectRowId}
+  fields:
+    config_entry_id:
+      name: FloriaX instance
+      description: Optional config entry ID. Required only when multiple FloriaX instances are configured.
+      selector:
+        config_entry:
+          integration: floriax
+    map_object_row_id:
+      name: mapObjectRowId
+      description: Path parameter mapObjectRowId.
+      required: true
+      selector:
+        text: {}
+    query:
+      name: Query parameters
+      description: Optional object with URL query parameters.
+      selector:
+        object: {}
+    body:
+      name: Request body
+      description: Optional JSON-compatible request body.
+      selector:
+        object: {}
+get_grouplead_quick_actions:
+  name: Schnellaktionen auflisten
+  description: GET /organizations/{orgId}/grouplead/quick-actions
+  fields:
+    config_entry_id:
+      name: FloriaX instance
+      description: Optional config entry ID. Required only when multiple FloriaX instances are configured.
+      selector:
+        config_entry:
+          integration: floriax
+    query:
+      name: Query parameters
+      description: Optional object with URL query parameters.
+      selector:
+        object: {}
+    body:
+      name: Request body
+      description: Optional JSON-compatible request body.
+      selector:
+        object: {}
+post_grouplead_quick_actions:
+  name: Schnellaktion erstellen
+  description: POST /organizations/{orgId}/grouplead/quick-actions
+  fields:
+    config_entry_id:
+      name: FloriaX instance
+      description: Optional config entry ID. Required only when multiple FloriaX instances are configured.
+      selector:
+        config_entry:
+          integration: floriax
+    query:
+      name: Query parameters
+      description: Optional object with URL query parameters.
+      selector:
+        object: {}
+    body:
+      name: Request body
+      description: Optional JSON-compatible request body.
+      selector:
+        object: {}
+put_grouplead_quick_actions_by_action_id:
+  name: Schnellaktion aktualisieren
+  description: PUT /organizations/{orgId}/grouplead/quick-actions/{actionId}
+  fields:
+    config_entry_id:
+      name: FloriaX instance
+      description: Optional config entry ID. Required only when multiple FloriaX instances are configured.
+      selector:
+        config_entry:
+          integration: floriax
+    action_id:
+      name: actionId
+      description: Path parameter actionId.
+      required: true
+      selector:
+        text: {}
+    query:
+      name: Query parameters
+      description: Optional object with URL query parameters.
+      selector:
+        object: {}
+    body:
+      name: Request body
+      description: Optional JSON-compatible request body.
+      selector:
+        object: {}
+delete_grouplead_quick_actions_by_action_id:
+  name: Schnellaktion löschen
+  description: DELETE /organizations/{orgId}/grouplead/quick-actions/{actionId}
+  fields:
+    config_entry_id:
+      name: FloriaX instance
+      description: Optional config entry ID. Required only when multiple FloriaX instances are configured.
+      selector:
+        config_entry:
+          integration: floriax
+    action_id:
+      name: actionId
+      description: Path parameter actionId.
+      required: true
+      selector:
+        text: {}
+    query:
+      name: Query parameters
+      description: Optional object with URL query parameters.
+      selector:
+        object: {}
+    body:
+      name: Request body
+      description: Optional JSON-compatible request body.
+      selector:
+        object: {}
+post_grouplead_quick_actions_by_action_id_trigger:
+  name: Schnellaktion auslösen und Einsatz anlegen
+  description: POST /organizations/{orgId}/grouplead/quick-actions/{actionId}/trigger
+  fields:
+    config_entry_id:
+      name: FloriaX instance
+      description: Optional config entry ID. Required only when multiple FloriaX instances are configured.
+      selector:
+        config_entry:
+          integration: floriax
+    action_id:
+      name: actionId
+      description: Path parameter actionId.
+      required: true
+      selector:
+        text: {}
+    query:
+      name: Query parameters
+      description: Optional object with URL query parameters.
+      selector:
+        object: {}
+    body:
+      name: Request body
+      description: Optional JSON-compatible request body.
+      selector:
+        object: {}
+get_grouplead_incidents:
+  name: Einsätze auflisten
+  description: GET /organizations/{orgId}/grouplead/incidents
+  fields:
+    config_entry_id:
+      name: FloriaX instance
+      description: Optional config entry ID. Required only when multiple FloriaX instances are configured.
+      selector:
+        config_entry:
+          integration: floriax
+    query:
+      name: Query parameters
+      description: Optional object with URL query parameters.
+      selector:
+        object: {}
+    body:
+      name: Request body
+      description: Optional JSON-compatible request body.
+      selector:
+        object: {}
+post_grouplead_incidents:
+  name: Einsatz erstellen
+  description: POST /organizations/{orgId}/grouplead/incidents
+  fields:
+    config_entry_id:
+      name: FloriaX instance
+      description: Optional config entry ID. Required only when multiple FloriaX instances are configured.
+      selector:
+        config_entry:
+          integration: floriax
+    query:
+      name: Query parameters
+      description: Optional object with URL query parameters.
+      selector:
+        object: {}
+    body:
+      name: Request body
+      description: Optional JSON-compatible request body.
+      selector:
+        object: {}
+put_grouplead_incidents_by_group_lead_incident_id:
+  name: Einsatz aktualisieren
+  description: PUT /organizations/{orgId}/grouplead/incidents/{groupLeadIncidentId}
+  fields:
+    config_entry_id:
+      name: FloriaX instance
+      description: Optional config entry ID. Required only when multiple FloriaX instances are configured.
+      selector:
+        config_entry:
+          integration: floriax
+    group_lead_incident_id:
+      name: groupLeadIncidentId
+      description: Path parameter groupLeadIncidentId.
+      required: true
+      selector:
+        text: {}
+    query:
+      name: Query parameters
+      description: Optional object with URL query parameters.
+      selector:
+        object: {}
+    body:
+      name: Request body
+      description: Optional JSON-compatible request body.
+      selector:
+        object: {}
+delete_grouplead_incidents_by_group_lead_incident_id:
+  name: Einsatz löschen
+  description: DELETE /organizations/{orgId}/grouplead/incidents/{groupLeadIncidentId}
+  fields:
+    config_entry_id:
+      name: FloriaX instance
+      description: Optional config entry ID. Required only when multiple FloriaX instances are configured.
+      selector:
+        config_entry:
+          integration: floriax
+    group_lead_incident_id:
+      name: groupLeadIncidentId
+      description: Path parameter groupLeadIncidentId.
+      required: true
+      selector:
+        text: {}
+    query:
+      name: Query parameters
+      description: Optional object with URL query parameters.
+      selector:
+        object: {}
+    body:
+      name: Request body
+      description: Optional JSON-compatible request body.
+      selector:
+        object: {}
+get_grouplead_incidents_by_group_lead_incident_id_journal:
+  name: Einsatztagebuch als entries auflisten
+  description: GET /organizations/{orgId}/grouplead/incidents/{groupLeadIncidentId}/journal
+  fields:
+    config_entry_id:
+      name: FloriaX instance
+      description: Optional config entry ID. Required only when multiple FloriaX instances are configured.
+      selector:
+        config_entry:
+          integration: floriax
+    group_lead_incident_id:
+      name: groupLeadIncidentId
+      description: Path parameter groupLeadIncidentId.
+      required: true
+      selector:
+        text: {}
+    query:
+      name: Query parameters
+      description: Optional object with URL query parameters.
+      selector:
+        object: {}
+    body:
+      name: Request body
+      description: Optional JSON-compatible request body.
+      selector:
+        object: {}
+post_grouplead_incidents_by_group_lead_incident_id_journal:
+  name: Tagebucheintrag erstellen
+  description: POST /organizations/{orgId}/grouplead/incidents/{groupLeadIncidentId}/journal
+  fields:
+    config_entry_id:
+      name: FloriaX instance
+      description: Optional config entry ID. Required only when multiple FloriaX instances are configured.
+      selector:
+        config_entry:
+          integration: floriax
+    group_lead_incident_id:
+      name: groupLeadIncidentId
+      description: Path parameter groupLeadIncidentId.
+      required: true
+      selector:
+        text: {}
+    query:
+      name: Query parameters
+      description: Optional object with URL query parameters.
+      selector:
+        object: {}
+    body:
+      name: Request body
+      description: Optional JSON-compatible request body.
+      selector:
+        object: {}
+get_grouplead_changes:
+  name: Dauerhaften Change-Feed seitenweise lesen; latestSequence ist der Snapshot-Baseline-Cursor
+  description: GET /organizations/{orgId}/grouplead/changes
+  fields:
+    config_entry_id:
+      name: FloriaX instance
+      description: Optional config entry ID. Required only when multiple FloriaX instances are configured.
+      selector:
+        config_entry:
+          integration: floriax
+    query:
+      name: Query parameters
+      description: Optional object with URL query parameters.
+      selector:
+        object: {}
+    body:
+      name: Request body
+      description: Optional JSON-compatible request body.
+      selector:
+        object: {}
+get_grouplead_changes_stream:
+  name: 'SSE: event=change, id=sequence; Last-Event-ID wird ebenfalls akzeptiert; 409 + resetRequired verlangt einen neuen
+    Snapshot'
+  description: GET /organizations/{orgId}/grouplead/changes/stream
+  fields:
+    config_entry_id:
+      name: FloriaX instance
+      description: Optional config entry ID. Required only when multiple FloriaX instances are configured.
+      selector:
+        config_entry:
+          integration: floriax
+    query:
+      name: Query parameters
+      description: Optional object with URL query parameters.
+      selector:
+        object: {}
+    body:
+      name: Request body
+      description: Optional JSON-compatible request body.
+      selector:
+        object: {}
+post_grouplead_push_registrations:
+  name: iOS-Installation für coalesced grouplead_sync registrieren
+  description: POST /organizations/{orgId}/grouplead/push-registrations
+  fields:
+    config_entry_id:
+      name: FloriaX instance
+      description: Optional config entry ID. Required only when multiple FloriaX instances are configured.
+      selector:
+        config_entry:
+          integration: floriax
+    query:
+      name: Query parameters
+      description: Optional object with URL query parameters.
+      selector:
+        object: {}
+    body:
+      name: Request body
+      description: Optional JSON-compatible request body.
+      selector:
+        object: {}
+delete_grouplead_push_registrations_by_installation_id:
+  name: iOS-Installation abmelden
+  description: DELETE /organizations/{orgId}/grouplead/push-registrations/{installationId}
+  fields:
+    config_entry_id:
+      name: FloriaX instance
+      description: Optional config entry ID. Required only when multiple FloriaX instances are configured.
+      selector:
+        config_entry:
+          integration: floriax
+    installation_id:
+      name: installationId
+      description: Path parameter installationId.
+      required: true
+      selector:
+        text: {}
+    query:
+      name: Query parameters
+      description: Optional object with URL query parameters.
+      selector:
+        object: {}
+    body:
+      name: Request body
+      description: Optional JSON-compatible request body.
+      selector:
+        object: {}
+post_grouplead_imports_groupalarm_preview:
+  name: Idempotenten Import vorab prüfen; Avatar-URL-Richtlinie wird geprüft, aber kein Bild abgerufen
+  description: POST /organizations/{orgId}/grouplead/imports/groupalarm/preview
+  fields:
+    config_entry_id:
+      name: FloriaX instance
+      description: Optional config entry ID. Required only when multiple FloriaX instances are configured.
+      selector:
+        config_entry:
+          integration: floriax
+    query:
+      name: Query parameters
+      description: Optional object with URL query parameters.
+      selector:
+        object: {}
+    body:
+      name: Request body
+      description: Optional JSON-compatible request body.
+      selector:
+        object: {}
+post_grouplead_imports_groupalarm_commit:
+  name: Import übernehmen und Avatare serverseitig speichern; Avatarfehler stehen in warnings und ändern den Personenstatus
+    nicht
+  description: POST /organizations/{orgId}/grouplead/imports/groupalarm/commit
+  fields:
+    config_entry_id:
+      name: FloriaX instance
+      description: Optional config entry ID. Required only when multiple FloriaX instances are configured.
+      selector:
+        config_entry:
+          integration: floriax
+    query:
+      name: Query parameters
+      description: Optional object with URL query parameters.
+      selector:
+        object: {}
+    body:
+      name: Request body
+      description: Optional JSON-compatible request body.
+      selector:
+        object: {}

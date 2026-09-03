@@ -1,0 +1,1430 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "FloriaX API",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "/api/v1"
+    }
+  ],
+  "components": {
+    "securitySchemes": {
+      "organizationToken": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "API-TOKEN"
+      }
+    }
+  },
+  "paths": {
+    "/organizations/{orgId}/gateways": {
+      "get": {
+        "tags": [
+          "Gateways"
+        ],
+        "summary": "Gateways auflisten",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Gateways"
+        ],
+        "summary": "Gateway erstellen",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      }
+    },
+    "/organizations/{orgId}/gateways/{gatewayId}": {
+      "put": {
+        "tags": [
+          "Gateways"
+        ],
+        "summary": "Gateway aktualisieren",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Gateways"
+        ],
+        "summary": "Gateway löschen",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      }
+    },
+    "/organizations/{orgId}/gateways/import": {
+      "post": {
+        "tags": [
+          "Gateways"
+        ],
+        "summary": "Gateways importieren",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      }
+    },
+    "/organizations/{orgId}/gateways/{gatewayId}/settings": {
+      "get": {
+        "tags": [
+          "Gateways"
+        ],
+        "summary": "Gateway-Einstellungen abrufen",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Gateways"
+        ],
+        "summary": "Gateway-Einstellungen speichern",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      }
+    },
+    "/organizations/{orgId}/gateway-groups": {
+      "get": {
+        "tags": [
+          "Gateway-Gruppen"
+        ],
+        "summary": "Gateway-Gruppen auflisten",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Gateway-Gruppen"
+        ],
+        "summary": "Gateway-Gruppe erstellen",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      }
+    },
+    "/organizations/{orgId}/buttons": {
+      "get": {
+        "tags": [
+          "Buttons"
+        ],
+        "summary": "Buttons auflisten",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Buttons"
+        ],
+        "summary": "Button erstellen",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      }
+    },
+    "/organizations/{orgId}/buttons/{buttonId}": {
+      "put": {
+        "tags": [
+          "Buttons"
+        ],
+        "summary": "Button aktualisieren",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Buttons"
+        ],
+        "summary": "Button löschen",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      }
+    },
+    "/organizations/{orgId}/buttons/import": {
+      "post": {
+        "tags": [
+          "Buttons"
+        ],
+        "summary": "Buttons importieren",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      }
+    },
+    "/organizations/{orgId}/environment-sensors": {
+      "get": {
+        "tags": [
+          "Sensoren"
+        ],
+        "summary": "Umweltsensoren auflisten",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      }
+    },
+    "/organizations/{orgId}/environment-sensors/{sensorId}/readings": {
+      "get": {
+        "tags": [
+          "Sensoren"
+        ],
+        "summary": "Sensor-Messwerte abrufen",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      }
+    },
+    "/organizations/{orgId}/environment-sensors/{sensorId}": {
+      "put": {
+        "tags": [
+          "Sensoren"
+        ],
+        "summary": "Sensor aktualisieren",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      }
+    },
+    "/organizations/{orgId}/things/entities": {
+      "get": {
+        "tags": [
+          "Things"
+        ],
+        "summary": "Thing-Entitäten auflisten",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Things"
+        ],
+        "summary": "Thing-Entität erstellen",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      }
+    },
+    "/organizations/{orgId}/alarms/settings": {
+      "get": {
+        "tags": [
+          "Alarme"
+        ],
+        "summary": "Alarm-Einstellungen abrufen",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Alarme"
+        ],
+        "summary": "Alarm-Einstellungen speichern",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      }
+    },
+    "/organizations/{orgId}/alarms/targets": {
+      "get": {
+        "tags": [
+          "Alarme"
+        ],
+        "summary": "Alarm-Ziele abrufen",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Alarme"
+        ],
+        "summary": "Alarm-Ziele speichern",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      }
+    },
+    "/organizations/{orgId}/alarms/events": {
+      "get": {
+        "tags": [
+          "Alarme"
+        ],
+        "summary": "Alarm-Ereignisse abrufen",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      }
+    },
+    "/organizations/{orgId}/alarms/events/{eventId}": {
+      "patch": {
+        "tags": [
+          "Alarme"
+        ],
+        "summary": "Alarm-Ereignis archivieren",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      }
+    },
+    "/organizations/{orgId}/mqtt-connections": {
+      "get": {
+        "tags": [
+          "MQTT"
+        ],
+        "summary": "MQTT-Verbindungen auflisten",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "MQTT"
+        ],
+        "summary": "MQTT-Verbindung erstellen",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      }
+    },
+    "/organizations/{orgId}/mqtt-connections/{connectionId}/messages": {
+      "get": {
+        "tags": [
+          "MQTT"
+        ],
+        "summary": "MQTT-Nachrichten abrufen",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      }
+    },
+    "/organizations/{orgId}/hosted-mqtt-broker": {
+      "get": {
+        "tags": [
+          "Hosted MQTT"
+        ],
+        "summary": "Hosted MQTT Broker abrufen",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Hosted MQTT"
+        ],
+        "summary": "Hosted MQTT Broker bereitstellen",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      }
+    },
+    "/organizations/{orgId}/hosted-mqtt-broker/users": {
+      "get": {
+        "tags": [
+          "Hosted MQTT"
+        ],
+        "summary": "Hosted MQTT Benutzer auflisten",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Hosted MQTT"
+        ],
+        "summary": "Hosted MQTT Benutzer erstellen",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      }
+    },
+    "/organizations/{orgId}/hosted-mqtt-broker/users/{hostedUserId}": {
+      "delete": {
+        "tags": [
+          "Hosted MQTT"
+        ],
+        "summary": "Hosted MQTT Benutzer löschen",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      }
+    },
+    "/organizations/{orgId}/time-tracking/sessions": {
+      "get": {
+        "tags": [
+          "Zeiterfassung"
+        ],
+        "summary": "Zeiterfassungs-Sessions abrufen",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Zeiterfassung"
+        ],
+        "summary": "Zeiterfassungs-Sessions importieren",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      }
+    },
+    "/organizations/{orgId}/time-tracking/incidents": {
+      "get": {
+        "tags": [
+          "Zeiterfassung"
+        ],
+        "summary": "Zeiterfassungs-Einsätze auflisten",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Zeiterfassung"
+        ],
+        "summary": "Zeiterfassungs-Einsatz erstellen",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      }
+    },
+    "/organizations/{orgId}/time-tracking/incidents/{incidentId}": {
+      "get": {
+        "tags": [
+          "Zeiterfassung"
+        ],
+        "summary": "Zeiterfassungs-Einsatzdetails abrufen",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      }
+    },
+    "/organizations/{orgId}/grouplead/people": {
+      "get": {
+        "tags": [
+          "GroupLead"
+        ],
+        "summary": "Personen auflisten; avatarUrl ist nur die Floriax-Bildroute, avatarSourceUrl die Verwaltungsquelle, avatarError ein optionaler Fehlercode",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "GroupLead"
+        ],
+        "summary": "Lokale GroupLead-Person erstellen und avatarUrl serverseitig laden; Bildfehler verhindern die Person nicht",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      }
+    },
+    "/grouplead-person-avatars/{orgId}/{personRecordId}": {
+      "get": {
+        "tags": [
+          "GroupLead"
+        ],
+        "summary": "Versioniertes Floriax-Personenbild öffentlich laden; v muss exakt der aktuellen 64-stelligen SHA-256-Version entsprechen",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      }
+    },
+    "/organizations/{orgId}/grouplead/people/{personRecordId}": {
+      "put": {
+        "tags": [
+          "GroupLead"
+        ],
+        "summary": "GroupLead-Person aktualisieren; unveränderte Avatarquelle erhält gespeicherte Bytes",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "GroupLead"
+        ],
+        "summary": "GroupLead-Person löschen; ein späterer Import meldet den gelöschten Datensatz als Konflikt",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      }
+    },
+    "/organizations/{orgId}/grouplead/tags": {
+      "get": {
+        "tags": [
+          "GroupLead Tags"
+        ],
+        "summary": "GroupLead-eigene Tags mit normalisierter MAC und optionaler Personen-ID auflisten",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "GroupLead Tags"
+        ],
+        "summary": "Unbekannte MAC eigenständig registrieren; alternativ sourceButtonId senden (benötigt zusätzlich buttons:read), um einen unabhängigen Snapshot aus dem Floriax-Buttonbestand anzulegen",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      }
+    },
+    "/organizations/{orgId}/grouplead/tags/{tagId}": {
+      "patch": {
+        "tags": [
+          "GroupLead Tags"
+        ],
+        "summary": "GroupLead-eigenen Namen oder UUID-Snapshot aktualisieren, ohne die Floriax-Quelle zu verändern; expectedName schützt die Web-Bearbeitung optional vor parallelem Überschreiben",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "GroupLead Tags"
+        ],
+        "summary": "Nur den GroupLead-eigenen Tag löschen",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      }
+    },
+    "/organizations/{orgId}/grouplead/tags/{tagId}/telemetry": {
+      "post": {
+        "tags": [
+          "GroupLead Tags"
+        ],
+        "summary": "Akkustand melden; lastSeenAt setzt der Server. Nur Akkuänderungen invalidieren Realtime und APNs.",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      }
+    },
+    "/organizations/{orgId}/grouplead/tags/{tagId}/assignment": {
+      "put": {
+        "tags": [
+          "GroupLead Tags"
+        ],
+        "summary": "Tag über die gemeinsame signierte Personen-ID zuordnen: positive ID für Floriax-Organisationsmitglieder, negative ID für GroupLead-Personen",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "GroupLead Tags"
+        ],
+        "summary": "Personenzuordnung lösen, ohne Tag oder Floriax-Daten zu löschen",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      }
+    },
+    "/organizations/{orgId}/grouplead/vehicles": {
+      "get": {
+        "tags": [
+          "GroupLead"
+        ],
+        "summary": "Fahrzeuge auflisten",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "GroupLead"
+        ],
+        "summary": "Fahrzeug erstellen",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      }
+    },
+    "/organizations/{orgId}/grouplead/vehicles/{vehicleId}": {
+      "put": {
+        "tags": [
+          "GroupLead"
+        ],
+        "summary": "Fahrzeug aktualisieren",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "GroupLead"
+        ],
+        "summary": "Fahrzeug löschen",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      }
+    },
+    "/organizations/{orgId}/grouplead/teams": {
+      "get": {
+        "tags": [
+          "GroupLead"
+        ],
+        "summary": "Teams einschließlich archivierter Teams auflisten",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "GroupLead"
+        ],
+        "summary": "Team-Upsert: ohne revision Create/blindes Update (Create startet bei 1); mit revision nur CAS-Update, fehlend oder stale ergibt 409",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      }
+    },
+    "/organizations/{orgId}/grouplead/teams/{teamRowId}": {
+      "delete": {
+        "tags": [
+          "GroupLead"
+        ],
+        "summary": "Team löschen",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      }
+    },
+    "/organizations/{orgId}/grouplead/map-objects": {
+      "get": {
+        "tags": [
+          "GroupLead"
+        ],
+        "summary": "Kartenobjekte auflisten",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "GroupLead"
+        ],
+        "summary": "Kartenobjekt-Upsert: ohne revision Create/blindes Update (Create startet bei 1); mit revision nur CAS-Update, fehlend oder stale ergibt 409",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      }
+    },
+    "/organizations/{orgId}/grouplead/map-objects/{mapObjectRowId}": {
+      "delete": {
+        "tags": [
+          "GroupLead"
+        ],
+        "summary": "Kartenobjekt löschen",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      }
+    },
+    "/organizations/{orgId}/grouplead/quick-actions": {
+      "get": {
+        "tags": [
+          "GroupLead"
+        ],
+        "summary": "Schnellaktionen auflisten",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "GroupLead"
+        ],
+        "summary": "Schnellaktion erstellen",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      }
+    },
+    "/organizations/{orgId}/grouplead/quick-actions/{actionId}": {
+      "put": {
+        "tags": [
+          "GroupLead"
+        ],
+        "summary": "Schnellaktion aktualisieren",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "GroupLead"
+        ],
+        "summary": "Schnellaktion löschen",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      }
+    },
+    "/organizations/{orgId}/grouplead/quick-actions/{actionId}/trigger": {
+      "post": {
+        "tags": [
+          "GroupLead"
+        ],
+        "summary": "Schnellaktion auslösen und Einsatz anlegen",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      }
+    },
+    "/organizations/{orgId}/grouplead/incidents": {
+      "get": {
+        "tags": [
+          "GroupLead"
+        ],
+        "summary": "Einsätze auflisten",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "GroupLead"
+        ],
+        "summary": "Einsatz erstellen",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      }
+    },
+    "/organizations/{orgId}/grouplead/incidents/{groupLeadIncidentId}": {
+      "put": {
+        "tags": [
+          "GroupLead"
+        ],
+        "summary": "Einsatz aktualisieren",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "GroupLead"
+        ],
+        "summary": "Einsatz löschen",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      }
+    },
+    "/organizations/{orgId}/grouplead/incidents/{groupLeadIncidentId}/journal": {
+      "get": {
+        "tags": [
+          "GroupLead"
+        ],
+        "summary": "Einsatztagebuch als entries auflisten",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "GroupLead"
+        ],
+        "summary": "Tagebucheintrag erstellen",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      }
+    },
+    "/organizations/{orgId}/grouplead/changes": {
+      "get": {
+        "tags": [
+          "GroupLead Sync"
+        ],
+        "summary": "Dauerhaften Change-Feed seitenweise lesen; latestSequence ist der Snapshot-Baseline-Cursor",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      }
+    },
+    "/organizations/{orgId}/grouplead/changes/stream": {
+      "get": {
+        "tags": [
+          "GroupLead Sync"
+        ],
+        "summary": "SSE: event=change, id=sequence; Last-Event-ID wird ebenfalls akzeptiert; 409 + resetRequired verlangt einen neuen Snapshot",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      }
+    },
+    "/organizations/{orgId}/grouplead/push-registrations": {
+      "post": {
+        "tags": [
+          "GroupLead Sync"
+        ],
+        "summary": "iOS-Installation für coalesced grouplead_sync registrieren",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      }
+    },
+    "/organizations/{orgId}/grouplead/push-registrations/{installationId}": {
+      "delete": {
+        "tags": [
+          "GroupLead Sync"
+        ],
+        "summary": "iOS-Installation abmelden",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      }
+    },
+    "/organizations/{orgId}/grouplead/imports/groupalarm/preview": {
+      "post": {
+        "tags": [
+          "GroupLead Import"
+        ],
+        "summary": "Idempotenten Import vorab prüfen; Avatar-URL-Richtlinie wird geprüft, aber kein Bild abgerufen",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      }
+    },
+    "/organizations/{orgId}/grouplead/imports/groupalarm/commit": {
+      "post": {
+        "tags": [
+          "GroupLead Import"
+        ],
+        "summary": "Import übernehmen und Avatare serverseitig speichern; Avatarfehler stehen in warnings und ändern den Personenstatus nicht",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      }
+    }
+  }
+}

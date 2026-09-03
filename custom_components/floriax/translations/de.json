@@ -1,0 +1,30 @@
+{
+  "title": "FloriaX",
+  "config": {
+    "step": {
+      "user": {
+        "title": "FloriaX verbinden",
+        "description": "Verbinde Home Assistant mit der FloriaX API. Die API-Basis-URL muss /api/v1 enthalten.",
+        "data": {
+          "api_base_url": "API-Basis-URL",
+          "org_id": "Organisations-ID",
+          "api_token": "API-Token"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Verbindung zu FloriaX fehlgeschlagen",
+      "invalid_auth": "API-Token wurde abgelehnt",
+      "invalid_url": "Ungültige URL"
+    },
+    "abort": {
+      "already_configured": "Diese FloriaX Organisation ist bereits eingerichtet"
+    }
+  },
+  "system_health": {
+    "info": {
+      "configured_instances": "Konfigurierte Instanzen",
+      "can_reach_server": "FloriaX API erreichbar"
+    }
+  }
+}
